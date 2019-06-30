@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		CD4CBCB522C897190091E027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD4CBCB422C897190091E027 /* Assets.xcassets */; };
 		CD4CBCB822C897190091E027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4CBCB622C897190091E027 /* LaunchScreen.storyboard */; };
 		CD4CBCC022C8B3580091E027 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4CBCBF22C8B3580091E027 /* InputViewController.swift */; };
+		CDB442F222C8BCE60077C7EF /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB442F122C8BCE60077C7EF /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		CD4CBCB722C897190091E027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD4CBCB922C897190091E027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD4CBCBF22C8B3580091E027 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		CDB442F122C8BCE60077C7EF /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		F56C63EDD61DC51A909F680E /* Pods_taskapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_taskapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -56,7 +58,6 @@
 				3B81951F282FAEE507525227 /* Pods-taskapp.debug.xcconfig */,
 				B20371B86569997EFE24DB0C /* Pods-taskapp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,6 +85,7 @@
 				CD4CBCAD22C897180091E027 /* AppDelegate.swift */,
 				CD4CBCAF22C897180091E027 /* ViewController.swift */,
 				CD4CBCBF22C8B3580091E027 /* InputViewController.swift */,
+				CDB442F122C8BCE60077C7EF /* Task.swift */,
 				CD4CBCB122C897180091E027 /* Main.storyboard */,
 				CD4CBCB422C897190091E027 /* Assets.xcassets */,
 				CD4CBCB622C897190091E027 /* LaunchScreen.storyboard */,
@@ -207,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB442F222C8BCE60077C7EF /* Task.swift in Sources */,
 				CD4CBCC022C8B3580091E027 /* InputViewController.swift in Sources */,
 				CD4CBCB022C897180091E027 /* ViewController.swift in Sources */,
 				CD4CBCAE22C897180091E027 /* AppDelegate.swift in Sources */,
