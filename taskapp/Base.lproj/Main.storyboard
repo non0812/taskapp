@@ -77,6 +77,7 @@
         <!--Input View Controller-->
         <scene sceneID="gQc-5M-dLS">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uw9-Qu-Ag3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ElA-Mh-api" customClass="InputViewController" customModule="taskapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0U1-VZ-3WR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -89,7 +90,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xFw-mt-BJF">
-                                <rect key="frame" x="10" y="176" width="300" height="120"/>
+                                <rect key="frame" x="10" y="247" width="300" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="CM3-97-ifi"/>
@@ -105,13 +106,25 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Isy-3A-0kv">
+                                <rect key="frame" x="10" y="216" width="300" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9an-GJ-5xz">
                                 <rect key="frame" x="10" y="145" width="300" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idq-4e-bSp">
+                                <rect key="frame" x="10" y="176" width="300" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FaQ-Gt-dLL">
-                                <rect key="frame" x="0.0" y="306" width="320" height="120"/>
+                                <rect key="frame" x="0.0" y="377" width="320" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="Sao-fL-GAd"/>
                                 </constraints>
@@ -123,15 +136,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Db0-fJ-mj7" firstAttribute="leading" secondItem="lLs-EZ-pz3" secondAttribute="leading" constant="10" id="0ch-RE-Cbr"/>
+                            <constraint firstItem="xFw-mt-BJF" firstAttribute="top" secondItem="Isy-3A-0kv" secondAttribute="bottom" constant="10" id="11f-rG-gDe"/>
+                            <constraint firstItem="idq-4e-bSp" firstAttribute="leading" secondItem="lLs-EZ-pz3" secondAttribute="leading" constant="10" id="39P-0k-rVf"/>
                             <constraint firstItem="FaQ-Gt-dLL" firstAttribute="trailing" secondItem="lLs-EZ-pz3" secondAttribute="trailing" id="3Zs-xW-nnz"/>
+                            <constraint firstItem="Isy-3A-0kv" firstAttribute="top" secondItem="idq-4e-bSp" secondAttribute="bottom" constant="10" id="3w8-0L-jKV"/>
                             <constraint firstItem="aRb-br-wgT" firstAttribute="top" secondItem="lLs-EZ-pz3" secondAttribute="top" constant="10" id="4Nu-qm-3wv"/>
-                            <constraint firstItem="Isy-3A-0kv" firstAttribute="top" secondItem="Db0-fJ-mj7" secondAttribute="bottom" constant="10" id="Anz-rE-Hyv"/>
+                            <constraint firstItem="FaQ-Gt-dLL" firstAttribute="top" secondItem="xFw-mt-BJF" secondAttribute="bottom" constant="10" id="6Jt-fU-maT"/>
+                            <constraint firstItem="9an-GJ-5xz" firstAttribute="leading" secondItem="lLs-EZ-pz3" secondAttribute="leading" constant="10" id="BF6-la-qoT"/>
                             <constraint firstItem="aRb-br-wgT" firstAttribute="leading" secondItem="lLs-EZ-pz3" secondAttribute="leading" constant="10" id="Foq-hE-Jfk"/>
-                            <constraint firstItem="FaQ-Gt-dLL" firstAttribute="top" secondItem="xFw-mt-BJF" secondAttribute="bottom" constant="10" id="R5d-7A-aeW"/>
+                            <constraint firstItem="lLs-EZ-pz3" firstAttribute="trailing" secondItem="idq-4e-bSp" secondAttribute="trailing" constant="10" id="Iiw-4E-DVG"/>
+                            <constraint firstItem="idq-4e-bSp" firstAttribute="top" secondItem="9an-GJ-5xz" secondAttribute="bottom" constant="10" id="Tnd-jh-0ds"/>
                             <constraint firstItem="xFw-mt-BJF" firstAttribute="leading" secondItem="lLs-EZ-pz3" secondAttribute="leading" constant="10" id="ZHA-cx-6Vb"/>
-                            <constraint firstItem="xFw-mt-BJF" firstAttribute="top" secondItem="Isy-3A-0kv" secondAttribute="bottom" constant="10" id="dUl-M3-DEt"/>
+                            <constraint firstItem="lLs-EZ-pz3" firstAttribute="trailing" secondItem="9an-GJ-5xz" secondAttribute="trailing" constant="10" id="jYo-nB-O4h"/>
                             <constraint firstItem="Db0-fJ-mj7" firstAttribute="top" secondItem="aRb-br-wgT" secondAttribute="bottom" constant="10" id="kiO-Eu-HLf"/>
                             <constraint firstItem="lLs-EZ-pz3" firstAttribute="trailing" secondItem="aRb-br-wgT" secondAttribute="trailing" constant="10" id="lLK-eD-es0"/>
+                            <constraint firstItem="9an-GJ-5xz" firstAttribute="top" secondItem="Db0-fJ-mj7" secondAttribute="bottom" constant="10" id="lSd-SK-SVJ"/>
                             <constraint firstItem="lLs-EZ-pz3" firstAttribute="trailing" secondItem="xFw-mt-BJF" secondAttribute="trailing" constant="10" id="nWr-1g-8r1"/>
                             <constraint firstItem="lLs-EZ-pz3" firstAttribute="trailing" secondItem="Db0-fJ-mj7" secondAttribute="trailing" constant="10" id="sOO-1j-L1C"/>
                             <constraint firstItem="FaQ-Gt-dLL" firstAttribute="leading" secondItem="lLs-EZ-pz3" secondAttribute="leading" id="tR1-u4-r4E"/>
@@ -146,7 +165,6 @@
                         <outlet property="titleTextField" destination="Db0-fJ-mj7" id="wl2-3e-Yoh"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uw9-Qu-Ag3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2058.75" y="119.36619718309859"/>
         </scene>
