@@ -4,6 +4,8 @@ import UserNotifications    // 追加
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var search: UITextField!
+    var searchWords : String?
     
     let realm = try! Realm()  // ←追加
     
@@ -20,6 +22,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    @IBAction func searchbutton(_ sender: Any) {
+        if search != nil {
+            do {
+                searchWords = search.text
+                let predicate = NSPredicate(format: "category = %@", "\(searchWords!)")
+                taskArray = realm.objects(Task.self).filter(predicate)
+               
+            }
+        }
+         tableView.reloadData()
+    }
+    
+    
+    
     
     // MARK: UITableViewDataSourceプロトコルのメソッド
     // データの数（＝セルの数）を返すメソッド
@@ -111,3 +128,4 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
 }
+

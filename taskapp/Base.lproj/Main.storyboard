@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WSs-0l-mCG">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="94" width="320" height="474"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="TbG-rD-TTW" detailTextLabel="udA-4S-E0M" style="IBUITableViewCellStyleSubtitle" id="otE-ow-N23">
@@ -48,24 +48,48 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ihe-r7-5dc">
+                                <rect key="frame" x="0.0" y="64" width="270" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW4-a5-DtG">
+                                <rect key="frame" x="270" y="64" width="50" height="30"/>
+                                <state key="normal" title="検索"/>
+                                <connections>
+                                    <action selector="searchbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t3n-FV-2ec"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WSs-0l-mCG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ofl-ug-aXr"/>
-                            <constraint firstItem="WSs-0l-mCG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ToZ-ks-AKE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WSs-0l-mCG" secondAttribute="bottom" id="hgT-6M-zvd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WSs-0l-mCG" secondAttribute="trailing" id="ueT-oE-622"/>
+                            <constraint firstAttribute="trailing" secondItem="rW4-a5-DtG" secondAttribute="trailing" id="0kp-mI-vqX"/>
+                            <constraint firstItem="Ihe-r7-5dc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0xP-k9-fuj"/>
+                            <constraint firstItem="rW4-a5-DtG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LMA-Cs-bw4"/>
+                            <constraint firstItem="WSs-0l-mCG" firstAttribute="top" secondItem="rW4-a5-DtG" secondAttribute="bottom" id="OFk-Ay-kaH"/>
+                            <constraint firstAttribute="bottom" secondItem="WSs-0l-mCG" secondAttribute="bottom" id="TuQ-ta-9hv"/>
+                            <constraint firstItem="WSs-0l-mCG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UbG-0C-2yv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ihe-r7-5dc" secondAttribute="trailing" constant="50" id="axC-Jh-l7v"/>
+                            <constraint firstItem="Ihe-r7-5dc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h0H-mt-hbm"/>
+                            <constraint firstItem="WSs-0l-mCG" firstAttribute="top" secondItem="Ihe-r7-5dc" secondAttribute="bottom" id="kp3-IG-V0s"/>
+                            <constraint firstItem="rW4-a5-DtG" firstAttribute="leading" secondItem="Ihe-r7-5dc" secondAttribute="trailing" id="pL9-6m-ziM"/>
+                            <constraint firstItem="WSs-0l-mCG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zGj-4P-oV8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="7w8-zL-bPz">
+                        <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Xmb-X4-ZhB">
                             <connections>
                                 <segue destination="ElA-Mh-api" kind="show" id="Lr2-cU-2mA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="search" destination="Ihe-r7-5dc" id="REF-3Q-XjS"/>
                         <outlet property="tableView" destination="WSs-0l-mCG" id="cjQ-sF-cIC"/>
                         <segue destination="ElA-Mh-api" kind="show" identifier="cellSegue" id="RHq-0c-Fh0"/>
                     </connections>
@@ -77,7 +101,6 @@
         <!--Input View Controller-->
         <scene sceneID="gQc-5M-dLS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uw9-Qu-Ag3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ElA-Mh-api" customClass="InputViewController" customModule="taskapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0U1-VZ-3WR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -166,6 +189,7 @@
                         <outlet property="titleTextField" destination="Db0-fJ-mj7" id="wl2-3e-Yoh"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uw9-Qu-Ag3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2058.75" y="119.36619718309859"/>
         </scene>
